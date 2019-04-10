@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/js/index.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <form>
+                <div class="form-group">
+                    <label for="name">图书名称</label>
+                    <input type="text" class="form-control" id="name" placeholder="请输入图书名称">
+                </div>
+                <div class="form-group">
+                    <label for="author">作者</label>
+                    <input type="text" class="form-control" id="author" placeholder="请输入作者">
+                </div>
+                <div class="form-group">
+                    <label for="number">数量</label>
+                    <input type="number" class="form-control" id="number" placeholder="请输入图书数量">
+                </div>
+                <button type="submit" class="btn btn-primary" id="save">保存</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/js/index.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <table class="table table-striped" id="bookTable">
+                <thead>
+                    <tr>
+                        <th scope="col">编号</th>
+                        <th scope="col">书名</th>
+                        <th scope="col">作者</th>
+                        <th scope="col">简介</th>
+                        <th scope="col">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                    <tr>
+                        <td>{{ book.id }}</td>
+                        <td>{{ book.name }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.number }}</td>
+                        <td>
+                            <a class="btn btn-success" href="/detail/{{ book.id }}" role="button">查看</a>
+                            <a class="btn btn-info" href="/update/{{ book.id }}" role="button">编辑</a>
+                            <button type="button" data-id="{{ book.id }}" class="btn btn-warning">删除</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a class="btn btn-primary" target="_blank" href="/insert" role="button">填加</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

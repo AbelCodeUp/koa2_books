@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/js/index.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">图书编号</label>
+                    <div class="col-sm-10">
+                        <span>{{book.id}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">图书名称</label>
+                    <div class="col-sm-10">
+                        <span>{{book.name}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">作者</label>
+                    <div class="col-sm-10">
+                        <span>{{book.author}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">数量</label>
+                    <div class="col-sm-10">
+                        <span>{{book.number}}</span>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary" href="/" role="button">返回</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
