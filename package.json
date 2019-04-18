@@ -4,19 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development supervisor ./app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "co": "^4.6.0",
+    "form-data": "^2.3.3",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-route": "^3.2.0",
     "koa-static": "^5.0.0",
-    "qs": "^6.7.0",
-    "swig": "^1.4.2"
+    "koa-swig": "^2.2.1",
+    "log4js": "^4.1.0",
+    "node-fetch": "^2.3.0",
+    "qs": "^6.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "cross-spawn": "^6.0.5",
+    "lodash": "^4.17.11",
+    "path": "^0.12.7",
+    "supervisor": "^0.12.0"
   }
 }
