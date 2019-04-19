@@ -36,7 +36,6 @@ configure({
     }
 })
 const logger = getLogger('cheese');
-
 app.use(koaBody({
     jsonLimit: '1kb'
 }));
