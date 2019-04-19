@@ -9,7 +9,6 @@ const {
     getLogger
 } = require('log4js');
 const errorHandler = require('./middleware/errorHandler');
-
 const app = new koa();
 app.use(serve(config.staticDir));
 
